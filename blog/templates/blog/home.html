@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome</h1>
+        <p class="lead">
+            This is <b>Django Blogs.</b> Hope you can have fun here! Have a nice day :)
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Login</a>
+            <a class="btn btn-primary btn-lg" href="{% url 'blog_register' %}" role="button">Register</a>
+        </p>
+    </div>
+
+{% endblock content %}

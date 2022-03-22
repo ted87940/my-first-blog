@@ -1,27 +1,29 @@
+
 h1 a, h2 a {
-    color: #C25100;
+    color: #072a40;
     font-family: 'Lobster';
 }
 
 body {
     padding-left: 15px;
+    
 }
 
 .page-header {
-    background-color: #C25100;
+    background-color:#f9f7f0;
     margin-top: 0;
     margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
 }
 
 .page-header h1,
 .page-header h1 a,
 .page-header h1 a:visited,
 .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
+    color: #072a40;
+    font-size: 30pt;
     text-decoration: none;
 }
+
 
 h1,
 h2,
@@ -46,19 +48,26 @@ h4 {
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
-    color: #ffffff;
+    color: #072a40;
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+    font-size: 15pt;
+    margin-right: 0px;
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-top: 20px;
 }
 
+.tablemar{
+    margin-top: 20px;
+}
+
+.newpost{
+    margin-top: 20px;
+}
 .post h2 a,
 .post h2 a:visited {
-    color: #000000;
+    color: #072a40;
 }
 
 .post > .date,
@@ -68,12 +77,38 @@ h4 {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
+    color: #072a40;
     background: none;
-    border-color: #C25100;
+    border-color: #072a40;
+    float:right;
 }
 
 .btn-secondary:hover {
     color: #FFFFFF;
     background-color: #C25100;
 }
+
+.btn btn-default {
+    float:right;
+    text-align:right;
+}
+
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+}
+th, td {
+      border: 1px solid black;
+      text-align: center;
+      padding: 15px;
+    }
+    th {
+      height: 70px;
+      background-color: #274c77;
+      color: #f9f7f0;
+    }
+    tr:hover {background-color: #6092ba;}
+    tr:nth-child(even) {background-color: #e7ecef;}
+

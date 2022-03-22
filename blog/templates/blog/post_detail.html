@@ -1,20 +1,24 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <article class="post">
-        {% if post.published_date %}
-            <time class="date">
-                {{ post.published_date }}
-            </time>
-        {% endif %}
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+
         <aside class="actions">
             {% if user.is_authenticated %}
             <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
-              {% include './icons/pencil-fill.svg' %}
+              {% include './icons/file-earmark-post-fill.svg' %}
             </a>
             {% endif %}
         </aside>
-    </article>
+        <article class="post">
+            {% if post.published_date %}
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+            {% else %}
+                <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}" > Publish</a>
+            {% endif %}
+                <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}">{% include './icons/file-earmark-x-fill.svg' %}</a>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+        </article>
 {% endblock %}

@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig',
+    'blog',
+    #'blog.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#login路徑
+#old version LOGIN_REDIRECT_URL = '/list'
+LOGIN_REDIRECT_URL = '/list'
+LOGIN_URL = 'login'
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
